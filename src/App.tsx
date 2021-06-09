@@ -20,7 +20,7 @@ function App() {
     //Local storage logic
     //maxvalue useEffect
     useEffect(() => {
-        let maxAsString = localStorage.getItem("maxValue")
+        let maxAsString = localStorage.getItem("maxValueOther")
         if (maxAsString) {
             let newMax = JSON.parse(maxAsString)
             setMaxValue(newMax)
@@ -28,12 +28,12 @@ function App() {
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("maxValue", JSON.stringify(maxValue))
+        localStorage.setItem("maxValueOther", JSON.stringify(maxValue))
     }, [maxValue])
 
     //minvalue useEffect
     useEffect(() => {
-        let minAsString = localStorage.getItem("minValue")
+        let minAsString = localStorage.getItem("minValueOther")
         if (minAsString) {
             let newMin = JSON.parse(minAsString)
             setMinValue(newMin)
@@ -41,12 +41,12 @@ function App() {
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("minValue", JSON.stringify(minValue))
+        localStorage.setItem("minValueOther", JSON.stringify(minValue))
     }, [minValue])
 
     //current value useEffect
     useEffect(() => {
-        let currentAsString = localStorage.getItem("currentValue")
+        let currentAsString = localStorage.getItem("currentValueOther")
         if (currentAsString) {
             let newCurrent = JSON.parse(currentAsString)
             setCounter(newCurrent)
@@ -54,7 +54,7 @@ function App() {
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("currentValue", JSON.stringify(counter))
+        localStorage.setItem("currentValueOther", JSON.stringify(counter))
     }, [counter])
 
     //Counter logic
